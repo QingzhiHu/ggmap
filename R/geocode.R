@@ -148,10 +148,7 @@ geocode <- function(location, output = c("latlon", "latlona", "more", "all"),
     }
 
     # add to url
-    url_string <- paste0(
-      sprintf("https://maps.googleapis.%s/maps/api/geocode/json?address=", ext),
-      posturl
-    )
+    url_string <- paste("http://maps.googleapis.com/maps/api/geocode/json?address=", posturl, key="AIzaSyC9D0vXh84s4FYro6IiZDA08xDOf5ac6Z8", sep = "")
 
   } else if(source == "dsk"){
     url_string <- paste0("http://www.datasciencetoolkit.org/maps/api/geocode/json?address=", posturl)
